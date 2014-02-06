@@ -16,7 +16,7 @@
   		  h1 { margin-left: -8%;}
    		  h2 { margin-left: -4%; }
    		  div.box { border: solid; border-width: thin; width: 100%; }
-   		  #map-canvas { height: 90%; margin 5% }
+   		  #map-canvas { height: 90%; margin 10% }
 		</style>
 		<script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9bG3UDPEzAGFONwUsRQQy2z41W2p9x3E&sensor=false">
@@ -27,7 +27,7 @@
 			function initialize() {
 				var mapOptions = {
 					center: new google.maps.LatLng(61.3850,-152.2683),
-					zoom: 12
+					zoom: 8
 				};
 				var map = new google.maps.Map(document.getElementById("map-canvas"),
 					mapOptions);
