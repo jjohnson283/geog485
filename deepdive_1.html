@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Deep Dive 1</title>
+		<!-- <link type="text/css" rel="stylesheet" href="style.css"> -->
+		
+		<style type="text/css">
+  		  body { color: white; background: black; }
+  		  h1 { color: green }
+  		  h2 { color: red }
+  		  body { margin-left: 10%; margin-right: 10%; }
+  		  h1 { margin-left: -8%;}
+   		  h2 { margin-left: -4%; }
+   		  div.box { border: solid; border-width: thin; width: 100%; }
+   		  img {width: 30%; height: 30%}
+		
+		#map-canvas { height: 90%; margin: 2% }
+		
+		</style>
+	
+	
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9bG3UDPEzAGFONwUsRQQy2z41W2p9x3E&sensor=false">
+		</script>
+		
+		<script type="text/javascript">
+			function initialize() {
+				var mapOptions = {
+					center: new google.maps.LatLng(61.3850,-152.2683),
+					zoom: 8
+				};
+				var map = new google.maps.Map(document.getElementById("map-canvas"),
+					mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	
+	
+	<body>
+		<h1><font color="red">Milestone 3</font></h1>
+	
+		<p>
+		James Johnson<br>
+		2/11/2014
+		</p>
+	
+		<h2>Map of Anchorage and Surrounding Area</h2>
+		<p>I chose to feature a map of Anchorage, Alaska and the surrounding area because I travel to Alaska every year. I would describe Alaska as Colorado on steroid. I wanted to make a terrain map of the area to highlight it's mountainous topography. </p>
+
+	
+		
+		
+		<div id="map-canvas"/>
+	
+	</body>
+	
+	
+</html>
