@@ -36,7 +36,8 @@
       viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
     }
     var mapDiv = document.getElementById('googft-mapCanvas');
-  
+    mapDiv.style.width = isMobile ? '100%' : '500px';
+    mapDiv.style.height = isMobile ? '100%' : '300px';
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(61.08380489603581, -149.58235000000002),
       zoom: 9,
@@ -80,6 +81,9 @@
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 </head>
+
+<body>
+  <div id="googft-mapCanvas"></div>
 
 	<body>
 
