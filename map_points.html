@@ -5,10 +5,10 @@
 <title>Alaska - Google Fusion Tables</title>
 <style type="text/css">
 html, body, #googft-mapCanvas {
-  height: 300px;
+  height: 500px;
   margin: 0;
   padding: 0;
-  width: 500px;
+  width: 700px;
 }
 </style>
 
@@ -28,7 +28,7 @@ html, body, #googft-mapCanvas {
     mapDiv.style.height = isMobile ? '100%' : '300px';
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(61.08380489603581, -149.58235000000002),
-      zoom: 10,
+      zoom: 9,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
