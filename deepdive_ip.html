@@ -4,7 +4,6 @@
 <meta name="viewport"></meta>
 <title>Alaska - Google Fusion Tables</title>
 <style type="text/css">
-body { color: white; background: black; }
   		  h1 { color: green }
   		  h2 { color: red }
   		 
@@ -28,8 +27,8 @@ html, #googft-mapCanvas {
       viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
     }
     var mapDiv = document.getElementById('googft-mapCanvas');
-    mapDiv.style.width = isMobile ? '100%' : '500px';
-    mapDiv.style.height = isMobile ? '100%' : '300px';
+    mapDiv.style.width = isMobile ? '100%' : '800px';
+    mapDiv.style.height = isMobile ? '100%' : '1000px';
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(61.08380489603581, -149.58235000000002),
       zoom: 9,
