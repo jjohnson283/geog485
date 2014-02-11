@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport"></meta>
-<title>View of astraptes_fulgerator_complex_sample_data - Google Fusion Tables</title>
+<title>Alaska - Google Fusion Tables</title>
 <style type="text/css">
 html, body, #googft-mapCanvas {
   height: 300px;
@@ -27,17 +27,19 @@ html, body, #googft-mapCanvas {
     mapDiv.style.width = isMobile ? '100%' : '500px';
     mapDiv.style.height = isMobile ? '100%' : '300px';
     var map = new google.maps.Map(mapDiv, {
-      center: new google.maps.LatLng(61.07517136568863, -149.4834730468749),
+      center: new google.maps.LatLng(61.08380489603581, -149.58235000000002),
       zoom: 10,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
 
     layer = new google.maps.FusionTablesLayer({
       map: map,
       heatmap: { enabled: false },
       query: {
-        select: "col1",
-        from: "1iua95KgH1H7fi1A0dPQemvvKPQRbQ9tNfTdh5ic",
+        select: "col3",
+        from: "16VSxDfGo2DxBql5d4h8K_Vz9XPUR6R2TF9Vhl5w",
         where: ""
       },
       options: {
