@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport"></meta>
-<title>astraptes_fulgerator_complex_sample_data - Google Fusion Tables</title>
+<title>View of astraptes_fulgerator_complex_sample_data - Google Fusion Tables</title>
 <style type="text/css">
   html, body, #googft-mapCanvas {
     height: 300px;
@@ -44,7 +44,7 @@
       zoom: 10,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-    var query = 'select col1, col2 from 1uMgkOUVk-OgHBUv-YBnSZLCk1K3iqZGox0a0Y4k limit 1000';
+    var query = 'select col1, col2 from 1iua95KgH1H7fi1A0dPQemvvKPQRbQ9tNfTdh5ic limit 1000';
     var request = gapi.client.fusiontables.query.sqlGet({ sql: query });
     request.execute(function(response) {
       onDataFetched(response);
