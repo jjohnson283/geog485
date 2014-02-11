@@ -10,6 +10,35 @@
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9bG3UDPEzAGFONwUsRQQy2z41W2p9x3E&sensor=false">
     </script>
+    var map;
+var anchorage = new google.maps.LatLng(61.3850,-152.2683);
+
+var MY_MAPTYPE_ID = 'custom_style';
+
+function initialize() {
+
+  var featureOpts = [
+    {
+      stylers: [
+        { hue: '#890000' },
+        { visibility: 'simplified' },
+        { gamma: 0.5 },
+        { weight: 0.5 }
+      ]
+    },
+    {
+      elementType: 'labels',
+      stylers: [
+        { visibility: 'off' }
+      ]
+    },
+    {
+      featureType: 'water',
+      stylers: [
+        { color: '#890000' }
+      ]
+    }
+  ];
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
