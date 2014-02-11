@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas { height: 100% }
+    <title>Simple styled maps</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
     </style>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9bG3UDPEzAGFONwUsRQQy2z41W2p9x3E&sensor=false">
-    </script>
-    var map;
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9bG3UDPEzAGFONwUsRQQy2z41W2p9x3E&sensor=false"></script>
+    <script>
+var map;
 var anchorage = new google.maps.LatLng(61.3850,-152.2683);
 
 var MY_MAPTYPE_ID = 'custom_style';
