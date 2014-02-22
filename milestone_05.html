@@ -59,15 +59,15 @@ South Bounding Coordinate 33.3734361111</li>
 		</ul>
 	<h2>Use proj or cs2cs (I suggest you use cs2cs) to calculate the coordinates of the spatial extent of the datasets that you downloaded in UTM Zone 13N, NAD27. Paste the input and output of the command(s) into your writeup. </h2>
 	<p>Each of my datasets had EPSG:42679 for the spatial reference so other than entering different lat/long the input and output commands didn't change. </p>
-	<p>Dateset 1: -1937740.87, 3958696.38 
-	s2cs +init="epsg:4269 +to +init="epsg:2022" 
-	07.8333333w 33.36666667n</p>
-	<p>Dataset 2: -1613470.04, 4281891.20 
-	s2cs +init="epsg:4269 +to +init="epsg:2022" 
-	05.333333w 36.7n</p>
-	<p>Dataset 3: -1728134.44, 3915240.56 
-	s2cs +init="epsg:4269 +to +init="epsg:2022" 
-	05.656838889w 33.4077027778</p>
+	<p>Dateset 1 - Output: -1937740.87, 3958696.38 
+	<li>cs2cs +init="epsg:4269 +to +init="epsg:2022"</li> 
+	<li>Input: 107.8333333w 33.36666667n</li></p>
+	<p>Dataset 2 - Output: -1613470.04, 4281891.20 
+	<li>cs2cs +init="epsg:4269 +to +init="epsg:2022"</li> 
+	<li>Input: 105.333333w 36.7n</li></p>
+	<p>Dataset 3 - Output: -1728134.44, 3915240.56 
+	<li>cs2cs +init="epsg:4269 +to +init="epsg:2022"</li> 
+	<li>Input: 105.656838889w 33.4077027778</p>
 	</body>
 	
 	<FORM METHOD="LINK" ACTION="http://jjohnson283.github.io/geog485/index.html">
