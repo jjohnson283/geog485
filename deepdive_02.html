@@ -25,56 +25,68 @@
 	</p>
 	<h1>Deep Dive #2</h1>
 	<h2>Questions 1: What request type is common across all three (WMS, WFS, WCS) OGC web services that we have learned about? </h2>
-	<p>Answer</p>
+	<p>GetCapabilities is common accross all three</p>
 	
 	<h2>Question 2a: What are the required parameters, and what do they represent?</h2>
-	<p>answer</p>
+	<ul>
+			<li>SERVICE=WMS - Service type</li>
+			<li>REQUEST=GetCapabilities - Request Name</li>
+			</ul>
+		
 	
 	<h2>Question 2b What is returned in response to a WMS GetCapabilities request?</h2>
-	<p>answer</p>
+	<ul>
+			<li>All interfaces a WMS service can support</li>
+			<li>Image formats it can serve (e.g. jpeg, png, gif)</li>
+			<li>List of spatial reference systems available for delivery of map data</li>
+			<li>List of all exception formats for return of exceptions </li>
+			<li>List of all vendor specific capabilities (or properties) that are available for modifying or controlling actions of the service with the current value of each capability </li>
+			<li>List of one or more map layers available in the service</li>
+			<li>List of layers supporting the optional GetFeatureInfo interface </li>
+			</ul>
 	
 	<h2>Question 3</h2>
 	<ul>
 			<li>What are the required parameters, and what do they represent?</li>
 			<ul>
-			<li>WMTVER -  Request Version
-			<li>Request=map - request name
-			<li>Layers-layer_list  - Map layers
-			<li>Styles - Rendering style
-			<li>SRS (depending on version) - Spatial reference system
-			<li>CRS (depending on version) - Spatial reference system
-			<li>BBOX - Bounding box corners in SRS units
-			<li>WIDTH - Width in pixels of map picture
-			<li>HEIGHT - Height in pixels of map picture
-			<li>FORMAT - Output format of map
+			<li>WMTVER -  Request Version</li>
+			<li>Request=map - request name</li>
+			<li>Layers-layer_list  - Map layers</li>
+			<li>Styles - Rendering style</li>
+			<li>SRS (depending on version) - Spatial reference system</li>
+			<li>CRS (depending on version) - Spatial reference system</li>
+			<li>BBOX - Bounding box corners in SRS units</li>
+			<li>WIDTH - Width in pixels of map picture</li>
+			<li>HEIGHT - Height in pixels of map picture</li>
+			<li>FORMAT - Output format of map</li>
 			</ul>
 			<li>What is returned in response to a WMS GetMap request? </li>
 			<ul>
-			<li>
+			<li>A map from a SWMS site</li>
 			</ul>
 			<li>What is the significance of transparency in WMS requests?</li>
 			<ul>
-			<li>Transparency is usefull for layering multiple WMS requests on top of each other.
+			<li>Transparency is usefull for layering multiple WMS requests on top of each other.</li>
 			</ul>
 		</ul>
 	
 	<h2>Question 4: What OGC request would you use to inform the configuration of a client application (like ArcGIS) about an OGC service that you want to add layers from?</h2>
-	<p>answer</p>
+	<p>GetCapabilities</p>
 
 		
 	<h2>Question 5:Which OGC request would you submit under the following circumstances (include both the service type [e.g. WMS, WFS, WCS], and the request [e.g. GetMap, GetCapabilities, GetCoverage, etc.] in your answer) </h2>
 	<ul>
 			<li>You want a map image representing three layers of data in a single JPEG for a specified area of interest. </li>
 			<ul>
-			<li>
+			<li>WMS GetMap</li>
 			</ul>
 			<li>You want to retrieve data representing geometries and associated attributes for a road network, with the returned data in GML.
 			<ul>
-			<li>
+			<li>WFS GetFeature</li>
 			</ul>
 			<li>You want to retrieve data representing a digital elevation model (a raster dataset) in the form of a GeoTIFF.</li>
 			<ul>
-			<li>
+			<li>WCS GetCoverage</li>
 			</ul>
 		</ul>
 		
@@ -82,15 +94,15 @@
 	<ul>
 			<li>WGS 84 (Geodetic CRS [geographic 2d])</li>
 			<ul>
-			<li>
+			<li>EPSG: 4326</li>
 			</ul>
 			<li>NAD83 / UTM zone 13N </li>
 			<ul>
-			<li>
+			<li>EPSG: 2151</li>
 			</ul>
 			<li>NAD27 / UTM zone 13N</li>
 			<ul>
-			<li>
+			<li> EPSG: 2022</li>
 			</ul>
 		</ul>
 		
@@ -111,23 +123,36 @@
 <ul>
 			<li>What is the Title of the service? </li>
 			<ul>
-			<li>
+			<li>rgis Dataset (715663ba-c1c3-414c-84a7-c671526f8316)</li>
 			</ul>
 			<li>Who is the Contact Person for questions about the service? </li>
 			<ul>
-			<li>
+			<li>GStore Support</li>
 			</ul>
 			<li>Who is the Contact Person for questions about the service? </li>
 			<ul>
-			<li>
+			<li>technical support</li>
 			</ul>
 			<li>What are the available image formats for the GetMap request for this service? </li>
 			<ul>
-			<li>
+			<li>image/png</li>
+			<li>image/gif</li>
+			<li>image/jpeg</li>
+			<li>image/png; mode=8bit</li>
+			<li>image/tiff</li>
 			</ul>
 			<li>What are the SRS/CRS’s for which layers from this service are available (remember that nested layers inherit the SRS/CRS of their parent layers).</li>
 			<ul>
-			<li>
+			<li>ESPG: 4296</li>
+			<li>ESPG: 4326</li>
+			<li>ESPG: 4267</li>
+			<li>ESPG: 26913</li>
+			<li>ESPG: 26912</li>
+			<li>ESPG: 26914</li>
+			<li>ESPG: 26713</li>
+			<li>ESPG: 26712</li>
+			<li>ESPG: 26714</li>
+			<li>ESPG: 3857</li>
 			</ul>
 			</ul>
 			
