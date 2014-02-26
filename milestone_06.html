@@ -29,71 +29,85 @@
 	<p>Google</p>
 	
 	<h2>Questions 2: How many hiits did you get?</h2>
-	<p>133,000</p>
+	<p>133,000 hits for Request=GetCapabilities and 13,900,000 hits for Request=WMS</p>
 	
 	<h2>Question 3: How useful (generally in terms of getting a pointers to live WMS services [defined as a functioning GetCapabilities request]) were the ‘hits’?</h2>
-	<p>Vey userfull, I found a pointer to a live WMS service in the second search result.</p>
+	<p>Vey userfull, I found a pointer to a live WMS service in the fourth search result.</p>
 	
-	<h2>Question 4 (service #1)</h2>
+	<h2>Question 4 (Service #1)</h2>
 	<ul>
 			<li>What is the URL for the full GetCapabilities request to the service? </li>
 			<ul>
-			<li>
+			<li>http://webservices.nationalatlas.gov/wms/1million?SERVICE=WMS&REQUEST=GetCapabilities</li>
 			</ul>
 			<li>What is the Name of the service?</li>
 			<ul>
-			<li>
+			<li>1 Million Scale WMS Layers from the National Atlas of the United States</li>
 			</ul>
 			<li>What Format(s) are available for GetMap requests from the service?</li>
 			<ul>
-			<li>
+			<li>image/png</li>
+			<li>image/jpeg</li>
+			<li>image/gif</li>
+			<li>image/png;mode=8bit</li>
+			<li>image/tif</li>
 			</ul>
 			<li>How many layers are included in the service (including nesting layers)?</li>
 			<ul>
-			<li>
+			<li>19</li>
 			</ul>
 		</ul>
 		
-		<h2>Question 4 (service #2)</h2>
+		<h2>Question 4 (Service #2)</h2>
 	<ul>
 			<li>What is the URL for the full GetCapabilities request to the service? </li>
 			<ul>
-			<li>
+			<li>http://137.227.242.85/ArcGIS/services/FWS_Wetlands_WMS/mapserver/wmsserver?request=GetCapabilities
 			</ul>
 			<li>What is the Name of the service?</li>
 			<ul>
-			<li>
+			<li>FWS_Wetlands_WMS
 			</ul>
 			<li>What Format(s) are available for GetMap requests from the service?</li>
 			<ul>
-			<li>
+			<li>image/bmp</li>
+			<li>image/jpeg</li>
+			<li>image/tiff</li>
+			<li>image/png</li>
+			<li>image/gif</li>
+			<li>image/svg/svg+xml</li>
 			</ul>
 			<li>How many layers are included in the service (including nesting layers)?</li>
 			<ul>
-			<li>
+			<li>20
 			</ul>
 		</ul>
 		
-		<h2>Question 5: For one of the layers in the first serve,</h2>
+		<h2>Question 5: For one of the layers in the first service,</h2>
 	<ul>
 			<li>What is the name of the layer?</li>
 			<ul>
-			<li>
+			<li>1 Million Scale - Railroad and Bus Passenger Stations</li>
 			</ul>
 			<li>What is the SRS of the layer? </li>
 			<ul>
-			<li>
+			<li>ESPG: 4326</li>
 			</ul>
 			<li>What is the name of the projection that matches the SRS EPSG code?</li>
 			<ul>
-			<li>
+			<li>WGS 84</li>
 			</ul>
 			<li>What is the LatLonBoundingBox of the layer?</li>
+			<ul>
+			<li>minx="18.9155" miny="-179.133" maxx="71.398" maxy="179.788"</li?
+			</ul>
 		</ul>
 		
-		<h2>Question 6: For one of the layers in the first serve,</h2>
+		<h2>Question 6: Open the following GetCapabilities request in your browser. Select “View Source” from the browser menu to see the delivered XML document (it may appear as an unformatted string of text by default in your browser - if that is the case, save the file to your hard drive and view it in a text editor). Use the information in the XML capabilities document to formulate GetMap requests for the following map images. Include the requests and resulting images in your write-up. Comment on anything unusual that you notice in the images that are returned. http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?SERVICE=wms&REQUEST=GetCapabilities&VERSION=1.1.1</h2>
 	<ul>
 			<li>for the area surrounding Bernalillo County (-107.2,34.7,-106,35.25) as a 200x200 pixel JPEG </li>
+			<p><a href="http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?SERVICE=wms&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=200&HEIGHT=200&SRS=EPSG:4326&FORMAT=jpeg"</a></p>
+			<img src=http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?SERVICE=wms&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=200&HEIGHT=200&SRS=EPSG:4326&FORMAT=jpeg>
 			<li>for the same area as a 500x500 pixel PNG </li>
 			
 		</ul>
