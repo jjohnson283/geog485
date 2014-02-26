@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder id="results">
+	<name>2946 Jefferson Street Northeast, Albuquerque, NM</name>
+	<Placemark id="21">
+		<name>2946 Jefferson St NE, Albuquerque, NM 87110, USA</name>
+		<address>2946 Jefferson St NE, Albuquerque, NM 87110, USA</address>
+		<styleUrl>#geocode</styleUrl>
+		<MultiGeometry>
+			<Point>
+				<coordinates>-106.592407,35.116299,0</coordinates>
+			</Point>
+			<LinearRing>
+				<coordinates>
+					-106.594925,35.113781,0 -106.594925,35.118817,0 -106.589889,35.118817,0 -106.589889,35.113781,0 -106.594925,35.113781,0 
+				</coordinates>
+			</LinearRing>
+		</MultiGeometry>
+		<AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>New Mexico</AdministrativeAreaName><Locality><LocalityName>Albuquerque</LocalityName><Thoroughfare><ThoroughfareName>2946 Jefferson St NE</ThoroughfareName></Thoroughfare></Locality></AdministrativeArea></Country></AddressDetails>
+	</Placemark>
+</Folder>
+</kml>
