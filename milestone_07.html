@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<!-- This page can be used as a template for completing your writeups for milestone and "deep dive" assignments -->
+	<!-- Replace the content placeholders with your own content -->
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Milestone 7</title>
+		<style type="text/css">
+  		  body { color: white; background: black; }
+  		  h1 { color: green }
+  		  h2 { color: red }
+  		  body { margin-left: 10%; margin-right: 10%; }
+  		  h1 { margin-left: -8%;}
+   		  h2 { margin-left: -4%; }
+		</style>
+		
+	</head>
+	<body>
+	<p>
+	James Johnson<br>
+	3/3/2014
+	</p>
+	
+	<h1>Milestone #7</h1>
+	<p>Given that McKinley County NM is contained within the following BBOX: -109.5, 34.5, -106.5, 36.5</p?>
+	<h2>What is the aspect ratio of this geographic region?</h2> 
+	<p>Aspect ratio=(maxx-minx)/(maxy-miny)</p>
+	<p>Aspect ratio=(-106.5-(-109.1))/(36.5-34.5)=2.6</p>
+	<p>Aspect ratio=2.6</p>
+	<h2>Question 2: What would be the height (in whole pixels) for a map image for this region that is 600 pixels wide?</h2>
+	<p>height=width/aspect ratio</p>
+	<p>height=600/2.6</p>
+	<p>height=231 pixels (rounded up from 230.769)</p>
+	<h2>Question 3: Formulate a WMS request that reflects the values determined in 1.1 and 1.2 above for the WMS service used above in the examples. Include in your answer both the actual WMS request and the returned map image.</h2>
+	<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231">http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231</a></p>
+	<img src=http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231 /></a>
+	<h2>Question 4: Formulate a WMS request for a 900x600 pixel map image that represents the full 3-degree width of the geographic region, and is based upon the minimum Y value of 34.5 degrees North Latitude. Include in your answer both the WMS request and the returned map image.</h2> 
+	<p> http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231</p>
+	<h2>Question 5:Given a WMS that is represented by the following GetCapabilities request, formulate individual GetMap requests using the following parameters:
+
+    BBOX=-106.639,35.074,-106.609,35.094 WIDTH=600 HEIGHT=400
+
+for each of the following layers: 0 (TNM_Large_Scale_Imagery) and 1 (1_foot_imagery) - yes - USGS just gave numbers as the layer names</h2> 
+	<p>answer</p>
+	<h2Question 6: Which layers return map images that display image content (i.e. return a non-blank image)? </h2> 
+	<p>answer</p>
+	<h2>Question 7: From examining the information for these layers in the GetCapabilities XML document - which element in each layer’s service metadata do you think provides information about the scales for which the layer will return map images containing data? </h2> 
+	<p>answer</p>
+	<h2>Question 8: Which map images contain data for each of the following map image widths (remember to adjust the image height to match the BBOX of the request) 
+    30 pixels 
+    1200 pixels  </h2> 
+	<p>answer</p>
+	</body>
+	
+	<FORM METHOD="LINK" ACTION="http://jjohnson283.github.io/geog485/index.html">
+<INPUT TYPE="submit" VALUE="Back to Home">
+</FORM>
+
+	
+</html>
