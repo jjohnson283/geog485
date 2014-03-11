@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<!-- This page can be used as a template for completing your writeups for milestone and "deep dive" assignments -->
+	<!-- Replace the content placeholders with your own content -->
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Midterm Exam</title>
+		<style type="text/css">
+  		  body { color: white; background: black; }
+  		  h1 { color: green }
+  		  h2 { color: red }
+  		  body { margin-left: 10%; margin-right: 10%; }
+  		  h1 { margin-left: -8%;}
+   		  h2 { margin-left: -4%; }
+		</style>
+		
+	</head>
+	<body>
+	<p>
+	James Johnson<br>
+	</p>
+	
+	<h1>Midterm Exam</h1>
+	<h2>Question 1: Which command line utility would you use to determine the following</h2>
+	<h2>The spatial extent of a GML file</h2>
+	<p>ogrinfo</p>
+	<h2>The spatial reference system of a raster fle in the format of a GeoTiff?</h2>
+	<p>gdalinfo</p>
+	<h2Question 2 What combination of OGC Service and Request(e.g.SERVICE=WMS&REQUEST=GetFeatureInfo)would you use to perform the following?</h2>
+	<h2>Determine the spatial extent of an available layer from a Web Map Service.</h2>
+	<p>SERVICE=WMS&REQUEST=GetCapabilities</p>
+	<h2>Obtain a list of coverages from a Web Coverage service.</h2>
+	<p>SERVICE=WCS&REQUEST=DescribeCoverage</p>
+	<h2>Determine what file formats are supported by a Web Feature Service for the delivery of available data types (i.e. layers)</h2>
+	<p>SERVICE=WFS&REQUEST=GetCapabilities</p>
+	<h2>Retrieve a map image from a Web Map Service</h2>
+	<p>SERVICE=WMS&REQUEST=GetMap</p>
+	<h2>Retrieve data from an available coverage from a Web Coverage Service</h2>
+	<p>SERVICE=WCS&REQUEST=GetCoverage</p>
+	<h2>Use the cs2cs command line utility to convert the following latitude-longitude coordinates (WGS84) to UTM, Zone 13N, NAD83 coordinates</h2>
+	<p>35.682180 North Latitude -105.939670 East Longitude (New Mexico State Capitol</p>
+	<p>34.891983 North Latitude -107.930153 East Longitude (El Malpais National Monument)</p>
+	
+	
+	
+	
+	
+	
+	<p>height=231 pixels (rounded up from 230.769)</p>
+	<h2>Question 3: Formulate a WMS request that reflects the values determined in 1.1 and 1.2 above for the WMS service used above in the examples. Include in your answer both the actual WMS request and the returned map image.</h2>
+	<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231">http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231</a></p>
+	<img src=http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231 /></a>
+	<h2>Question 4: Formulate a WMS request for a 900x600 pixel map image that represents the full 3-degree width of the geographic region, and is based upon the minimum Y value of 34.5 degrees North Latitude. Include in your answer both the WMS request and the returned map image.</h2> 
+	<p>Ratio=900/600=1.5</p>
+	<p>1.5=(-106.5-(-109.1))/(maxy-34.5)</p>
+	<p>Maxy=35.9</p>
+	<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,35.9&AYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=900&HEIGHT=600">http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,35.9&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=900&HEIGHT=600</a></p>
+	<img src=http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,35.9&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=900&HEIGHT=600 /></a>
+	<h2>Question 5:Given a WMS that is represented by the following GetCapabilities request, formulate individual GetMap requests using the following parameters:
+
+    BBOX=-106.639,35.074,-106.609,35.094 WIDTH=600 HEIGHT=400
+
+for each of the following layers: 0 (TNM_Large_Scale_Imagery) and 1 (1_foot_imagery) - yes - USGS just gave numbers as the layer names</h2> 
+	<p>For Layer: 0 (TNM_Large_Scale_Imagery)</p>
+	<p><a href="http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=600&HEIGHT=400&STYLES=&LAYERS=0">http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=600&HEIGHT=400&STYLES=&LAYERS=0</a></p>
+	<img src=http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=600&HEIGHT=400&STYLES=&LAYERS=0 /></a>
+	
+	<p>For Layer: 1 (1_Foot_imagery)</p>
+	<p><a href="http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=600&HEIGHT=400&STYLES=&LAYERS=1">http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=600&HEIGHT=400&STYLES=&LAYERS=1</a></p>
+	<img src=http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=600&HEIGHT=400&STYLES=&LAYERS=1 /></a>
+	
+	<h2>Question 6: Which layers return map images that display image content (i.e. return a non-blank image)? </h2>
+	<p>The GetMap request for Layer 0 (TNM_Large_Scale_Imagery) returned image content, as you can see above.</p>
+	<p>The GetMap request for layer 1 (1_Foot_imagery) returned a blank image, as you can see above.</p>
+	<h2>Question 7: From examining the information for these layers in the GetCapabilities XML document - which element in each layer’s service metadata do you think provides information about the scales for which the layer will return map images containing data? </h2> 
+	<p>The MaxScaleDenominator element.</p>
+	<h2>Question 8: Which map images contain data or each of the following map image widths (remember to adjust the image height to match the BBOX of the request) f
+    30 pixels 
+    1200 pixels  </h2> 
+	<p>Layer 1 contains data at 1200 pixels (shown below). Layer 1 came back blank at 30 pixels</p>
+	<p><a href="http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=1200&HEIGHT=900&STYLES=&LAYERS=1">http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=1200&HEIGHT=900&STYLES=&LAYERS=1</a></p>
+	<img src=http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=1200&HEIGHT=900&STYLES=&LAYERS=1 /></a>
+	
+	<p>Layer 0 contains data at 1200 pixels (shown below). Layer 0 also come back blank at 30 pixels</p>
+	<p><a href="http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=1200&HEIGHT=900&STYLES=&LAYERS=0">http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=1200&HEIGHT=900&STYLES=&LAYERS=0</a></p>
+	<img src=http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?%20SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&WIDTH=1200&HEIGHT=900&STYLES=&LAYERS=0 /></a>
+	
+	</body>
+	
+	<FORM METHOD="LINK" ACTION="http://jjohnson283.github.io/geog485/index.html">
+<INPUT TYPE="submit" VALUE="Back to Home">
+</FORM>
+
+	
+</html>
