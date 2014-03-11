@@ -67,17 +67,32 @@
 	<img src="http://i187.photobucket.com/albums/x154/snowboarder41599/cs2cs-1.jpg"/></a>
 	<h2>Question 4: Perform the following WMS GetCapabilities request</h2>
 	<p><a href="http://neowms.sci.gsfc.nasa.gov/wms/wms?version=1.1.1&service=WMS&request=GetCapabilities">http://neowms.sci.gsfc.nasa.gov/wms/wms?version=1.1.1&service=WMS&request=GetCapabilities</a></p>
+	<p>What is the name of the service?</p>
+	<ul>
+	<li>Name: OGC:WMS</li>
+	<li>Title: NASA Earth Ovservations (NEO)</li>
+	</ul>
+	<p>What file formats are supported by the GetMap request?</p>
+	<ul>
+	<li>image/png</li>
+	<li>image/jpeg</li>
+	</ul>
+	<p>What are the names of three of the layers included in the service?</p>
+	<ul>
+	<li>1: MOD14A1_M_FIRE</li>
+	<li>2: MOD14A1_E_FIRE</li>
+	<li>3: MOD14A1_D_FIRE</</li>
+	</ul>
 	
+	<h2>Question 5: Compose a GetMap request for the WMS referenced in Question 4 that includes the following characteristics:</h2>
+	<li>JPEG image forma</li>
+	<li>1200 pixels wide (you will need to calculate the height based upon the aspect ratio of the bounding box)</li>
+	<li>Bounding Box (EPSG:4326):Min X = -128 East Longitude, Min Y = 21.5 North Latitude, MaxX = -62 East Longitude, Max Y = 54.5 North Latitude</li>
+	<li>Layer to be mapped = “MOD_LSTD_CLIM_M"</li>
+
+	<p><a href="http://neowms.sci.gsfc.nasa.gov/wms/wms?version=1.1.1&service=WMS&request=GetMap&BBOX=-128,21.5,-62,54.5&LAYERS=MOD_LSTD_CLIM_M&FORMAT=image/jpeg&SRS=EPSG:4326&WIDTH=1200&HEIGHT=800">http://neowms.sci.gsfc.nasa.gov/wms/wms?version=1.1.1&service=WMS&request=GetMap&BBOX=-128,21.5,-62,54.5&LAYERS=MOD_LSTD_CLIM_M&FORMAT=image/jpeg&SRS=EPSG:4326&WIDTH=1200&HEIGHT=800</a></p>
+	<img src=http://neowms.sci.gsfc.nasa.gov/wms/wms?version=1.1.1&service=WMS&request=GetMap&BBOX=-128,21.5,-62,54.5&LAYERS=MOD_LSTD_CLIM_M&FORMAT=image/jpeg&SRS=EPSG:4326&WIDTH=1200&HEIGHT=800 /></a>
 	
-	
-	
-	
-	
-	
-	<p>height=231 pixels (rounded up from 230.769)</p>
-	<h2>Question 3: Formulate a WMS request that reflects the values determined in 1.1 and 1.2 above for the WMS service used above in the examples. Include in your answer both the actual WMS request and the returned map image.</h2>
-	<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231">http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231</a></p>
-	<img src=http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231 /></a>
 	<h2>Question 4: Formulate a WMS request for a 900x600 pixel map image that represents the full 3-degree width of the geographic region, and is based upon the minimum Y value of 34.5 degrees North Latitude. Include in your answer both the WMS request and the returned map image.</h2> 
 	<p>Ratio=900/600=1.5</p>
 	<p>1.5=(-106.5-(-109.1))/(maxy-34.5)</p>
