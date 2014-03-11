@@ -28,15 +28,15 @@
 	<p>Given that McKinley County NM is contained within the following BBOX: -109.5, 34.5, -106.5, 36.5</p?>
 	<h2>What is the aspect ratio of this geographic region?</h2> 
 	<p>Aspect ratio=(maxx-minx)/(maxy-miny)</p>
-	<p>Aspect ratio=(-106.5-(-109.1))/(36.5-34.5)=2.6</p>
-	<p>Aspect ratio=2.6</p>
+	<p>Aspect ratio=(-106.5-(-109.5))/(36.5-34.5)=1.5</p>
+	<p>Aspect ratio=1.5</p>
 	<h2>Question 2: What would be the height (in whole pixels) for a map image for this region that is 600 pixels wide?</h2>
 	<p>height=width/aspect ratio</p>
-	<p>height=600/2.6</p>
-	<p>height=231 pixels (rounded up from 230.769)</p>
+	<p>height=600/1.5</p>
+	<p>height=400 pixels</p>
 	<h2>Question 3: Formulate a WMS request that reflects the values determined in 1.1 and 1.2 above for the WMS service used above in the examples. Include in your answer both the actual WMS request and the returned map image.</h2>
-	<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231">http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231</a></p>
-	<img src=http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=231 /></a>
+	<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=400">http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=400</a></p>
+	<img src=http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.5,34.5,-106.5,36.5&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=400 /></a>
 	<h2>Question 4: Formulate a WMS request for a 900x600 pixel map image that represents the full 3-degree width of the geographic region, and is based upon the minimum Y value of 34.5 degrees North Latitude. Include in your answer both the WMS request and the returned map image.</h2> 
 	<p>Ratio=900/600=1.5</p>
 	<p>1.5=(-106.5-(-109.1))/(maxy-34.5)</p>
