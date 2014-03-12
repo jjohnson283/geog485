@@ -40,7 +40,7 @@
 	</ul>
 	<p>Obtain a list of coverages from a Web Coverage service.</p>
 	<ul>
-	<li>SERVICE=WCS&REQUEST=DescribeCoverage</li>
+	<li>SERVICE=WCS&REQUEST=GetCoverage</li>
 	</ul>
 	<p>Determine what file formats are supported by a Web Feature Service for the delivery of available data types (i.e. layers)</p>
 	<ul>
@@ -120,7 +120,7 @@
 	<h2>Question 7: From the XML GetCapabilities returned by the following WCS request answer the following questions</h2>
 	<p>What is the description of the v coverage?</p>
 	<ul>
-	<li>u m s-1 true surface_eastward_sea_water_velocity</li> 
+	<li>surface_northward_sea_water_velocity</li> 
 	</ul>
 	<p>How many coverages are available from this service?</p>
 	<ul>
@@ -128,16 +128,18 @@
 	</ul>
 	
 	<h2>Question 8a: Formulate a complete DescribeCoverage request for the v coverage for the WCS service ref-erenced in Question 7</h2>
-	<p><a href="http://sdf.ndbc.noaa.gov/thredds/wcs/hfradar_usegc_1km?request=GetCapabilities&version=1.0.0&service=WCS&REQUEST=DescribeCoverage&COVERAGE=V" >http://sdf.ndbc.noaa.gov/thredds/wcs/hfradar_usegc_1km?request=GetCapabilities&version=1.0.0&service=WCS&REQUEST=DescribeCoverage&COVERAGE=V</a></p>
+	<p><a href="http://sdf.ndbc.noaa.gov/thredds/wcs/hfradar_uswc_500m?REQUEST=DescribeCoverage&SERVICE=WCS&VERSION=1.0.0&COVERAGE=v" >http://sdf.ndbc.noaa.gov/thredds/wcs/hfradar_uswc_500m?REQUEST=DescribeCoverage&SERVICE=WCS&VERSION=1.0.0&COVERAGE=v</a></p>
 	
 	<h2>Question 8b: From the returned XML document answer the following questions</h2>
 	<p>What is the spatial domain for the 'v" coverage?</p>
 	<ul>
-	<li>-97.88385009765625 21.700000762939453, -57.1924934387207 46.49441909790039</li> 
+	<li>-122.59346771240234 37.45548629760742, -122.0468978881836 38.13872528076172</li> 
 	</ul>
 	<p>What file formats are available for ‘v‘ data delivered by this service?</p>
 	<ul>
-	<li>application/vnd.ogc.se_xml</li> 
+	<li>GeoTiff</li>
+	<li>GeoTiff_Float</li> 
+	<li>NetCDF3</li> 
 	</ul>
 	<p>What SRS(s) are supported by this service for requested data delivery?</p>
 	<ul>
