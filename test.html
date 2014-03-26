@@ -15,29 +15,15 @@
         		var zoom = 7;
         		var map;
         		var layer;
-        		
-        		var map;
-
-function init() {
-
-    map = new OpenLayers.Map({
-        div: "map",
-        allOverlays: true
-    });
-
-    var osm = new OpenLayers.Layer.OSM();
-    var gmap = new OpenLayers.Layer.Google("Google Streets", {visibility: false});
-
-    // note that first layer must be visible
-    map.addLayers([osm, gmap]);
-
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
-    map.zoomToMaxExtent();
+        	
 
         	function init(){
-            		map = new OpenLayers.Map( 'map_canvas' );
+            		map = new OpenLayers.Map( 'map_canvas' );   
+            		div: "map",
+        allOverlays: true
+    });
             		layer = new OpenLayers.Layer.OSM( "Open Street Map");
-            		map.addLayer(layer);
+            		map.addLayer(osm, gmap); 
             		map.setCenter(
                 		new OpenLayers.LonLat(lon, lat).transform(
                 		new OpenLayers.Projection("EPSG:4326"),
