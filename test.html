@@ -18,19 +18,7 @@
         		
         		function init() {
 
-    map = new OpenLayers.Map({
-        div: "map",
-        allOverlays: true
-    });
-
-    var osm = new OpenLayers.Layer.OSM();
-    var gmap = new OpenLayers.Layer.Google("Google Streets", {visibility: false});
-
-   
-    map.addLayers([osm, gmap]);
-
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
-    map.zoomToMaxExtent();
+ <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-150.32730102539062%2C61.04033710138008%2C-149.34539794921875%2C61.335186583419144&amp;layer=cyclemap&amp;marker=61.18810667083847%2C-149.8363494873047" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/?mlat=61.1881&amp;mlon=-149.8363#map=11/61.1881/-149.8363&amp;layers=C">View Larger Map</a></small>
 
         	
 
