@@ -17,11 +17,10 @@
         var zoom = 14;
         var map;
         var gsat, ghyb, gphy;                    	
-        var OSMlayer;   
-        
+        var OSMlayer;                                    
         
         function init(){
-            map = new OpenLayers.Map( 'map', {
+            map = new OpenLayers.Map( 'map',{
             maxExtent: new OpenLayers.Bounds(
                 -128 * 156543.0339,
                 -128 * 156543.0339,
@@ -59,12 +58,11 @@
                 map.getProjectionObject()
              ), zoom);
                 
-            map.addControl(new OpenLayers.Control.LayerSwitcher
-            new OpenLayers.Control.Navigation({}),
+            map.addControl(new OpenLayers.Control.Navigation({}),
         	  new OpenLayers.Control.PanZoomBar({}),
+			      new OpenLayers.Control.LayerSwitcher({}),
 			      new OpenLayers.Control.Permalink(),
-			      new OpenLayers.Control.MousePosition({})() );
-        }
+			      new OpenLayers.Control.MousePosition({})
         
         
     </script>
@@ -76,7 +74,6 @@
   		  body { margin-left: 10%; margin-right: 10%; }
   		  h1 { margin-left: -8%;}
    		  h2 { margin-left: -4%; }
-            
                   html { height: 100% }
     </style      
         
