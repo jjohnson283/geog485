@@ -18,17 +18,10 @@
         var map;
         var gsat, ghyb, gphy;                    	
         var OSMlayer;   
-        var baseControls = [
-            new OpenLayers.Control.Navigation({}),
-        	  new OpenLayers.Control.PanZoomBar({}),
-			      new OpenLayers.Control.LayerSwitcher({}),
-			      new OpenLayers.Control.Permalink(),
-			      new OpenLayers.Control.MousePosition({})
+        
         
         function init(){
             map = new OpenLayers.Map( 'map', {
-		controls: baseControls
-			   })
             maxExtent: new OpenLayers.Bounds(
                 -128 * 156543.0339,
                 -128 * 156543.0339,
@@ -66,7 +59,11 @@
                 map.getProjectionObject()
              ), zoom);
                 
-            map.addControl(new OpenLayers.Control.LayerSwitcher() );
+            map.addControl(new OpenLayers.Control.LayerSwitcher
+            new OpenLayers.Control.Navigation({}),
+        	  new OpenLayers.Control.PanZoomBar({}),
+			      new OpenLayers.Control.Permalink(),
+			      new OpenLayers.Control.MousePosition({})() );
         }
         
         
