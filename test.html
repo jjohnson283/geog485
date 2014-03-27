@@ -58,11 +58,8 @@
                 map.getProjectionObject()
              ), zoom);
                 
-            map.addControl(new OpenLayers.Control.Navigation({}),
-        	  new OpenLayers.Control.PanZoomBar({}),
-			      new OpenLayers.Control.LayerSwitcher({}),
-			      new OpenLayers.Control.Permalink(),
-			      new OpenLayers.Control.MousePosition({})
+            map.addControl(new OpenLayers.Control.LayerSwitcher() );
+        }
         
         
     </script>
