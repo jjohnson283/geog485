@@ -17,7 +17,15 @@
         var zoom = 14;
         var map;
         var gsat, ghyb, gphy;                    	
-        var OSMlayer;                                    
+        var OSMlayer;   
+            var baseControls = [
+            new OpenLayers.Control.Navigation({}),
+        	  new OpenLayers.Control.PanZoomBar({}),
+			      new OpenLayers.Control.LayerSwitcher({}),
+			      new OpenLayers.Control.Permalink(),
+			      new OpenLayers.Control.MousePosition({})
+        ];
+
         
         function init(){
             map = new OpenLayers.Map( 'map',{
@@ -58,14 +66,6 @@
                 map.getProjectionObject()
              ), zoom);
                 
-            var baseControls = [
-            new OpenLayers.Control.Navigation({}),
-        	  new OpenLayers.Control.PanZoomBar({}),
-			      new OpenLayers.Control.LayerSwitcher({}),
-			      new OpenLayers.Control.Permalink(),
-			      new OpenLayers.Control.MousePosition({})
-        ];
-
 
         
     </script>
