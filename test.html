@@ -19,13 +19,6 @@
         var gsat, ghyb, gphy;                    	
         var OSMlayer;      
         
-        var baseControls = [
-            new OpenLayers.Control.Navigation({}),
-        	  new OpenLayers.Control.PanZoomBar({}),
-			      new OpenLayers.Control.LayerSwitcher({}),
-			      new OpenLayers.Control.Permalink(),
-			      new OpenLayers.Control.MousePosition({})
-        
         function init(){
             map = new OpenLayers.Map( 'map',{
             maxExtent: new OpenLayers.Bounds(
