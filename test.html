@@ -18,7 +18,7 @@
         var map;
         var gsat, ghyb, gphy;                    	
         var OSMlayer;   
-            var baseControls = [
+        var baseControls = [
             new OpenLayers.Control.Navigation({}),
         	  new OpenLayers.Control.PanZoomBar({}),
 			      new OpenLayers.Control.LayerSwitcher({}),
@@ -26,18 +26,13 @@
 			      new OpenLayers.Control.MousePosition({})
         ];
 
-        
-        function init(){
-            map = new OpenLayers.Map( 'map',{
-            maxExtent: new OpenLayers.Bounds(
-                -128 * 156543.0339,
-                -128 * 156543.0339,
-                128 * 156543.0339,
-                128 * 156543.0339),
-                maxResolution: 156543.0339,                
-                units: 'm',
-                projection: new OpenLayers.Projection('EPSG:3857'),
-                displayProjection: new OpenLayers.Projection("EPSG:4326"),
+<!-- Initialization Function -->
+		
+         function init(){
+            map = new OpenLayers.Map( 'map_canvas', {
+					  controls: baseControls
+			   });
+
             } );
             
               gsat = new OpenLayers.Layer.Google(
