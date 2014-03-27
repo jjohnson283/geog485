@@ -2,8 +2,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	
-	<!-- This page can be used as a template for completing your writeups for milestone and "deep dive" assignments -->
-	<!-- Replace the content placeholders with your own content -->
 	
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -18,7 +16,7 @@
         var lat = 37.4722;
         var zoom = 14;
         var map;
-        var gphy, gmap, ghyb, gsat;                    	
+        var gsat, ghyb, gphy, ;                    	
         var OSMlayer;                                    
         
         function init(){
@@ -89,12 +87,12 @@
 	<h2>Question 2: What is the center point (latitude and longitude) of your area of interest?</h2>
 	<p>37.4722,-106.7933</p>
 	<h2>Question 3: What base map(s) did you select for use in your map? Why?</h2>
-	<p>OpenStreetMap - Since that is the new map were working with it made sense to make it a layer.</p>
-	<p>Google Physical - Because it shows topography of the area with contour lines.</p>
-	<p>Google Hybrid - To show ariel imagery of the ski area with names.</p>
 	<p>Google Satellite - To show ariel imagery of the ski area without names listed to get a good view of ski area.</p>
+	<p>Google Hybrid - To show ariel imagery of the ski area with names.</p>
+	<p>Google Physical - Because it shows topography of the area with contour lines.</p>
+	<p>OpenStreetMap - Since that is the new map were working with it made sense to make it a layer.</p>
 	<h2>Question 4: What is the scale of your map (local, regional, continental, global)? How will this translate into your selection of an appropriate default zoom level for your map?</h2>
-	<p>The scale of this map will be regional. I will put the zoom level at 8 because it zooms nicely on Anchorage and the surrounding area.</p>
+	<p>The scale of this map will be local. I will put the zoom level at 14 because it gives a complete and nice view of the ski area at that level.</p>
 	<h2>Question 5: Embed the OpenLayers Map in your writeup (included with the answers to questions 1-4 above) that is based upon your responses to questions 1-4 above. </h2>
 	<div id="map"></div>
 	</body>
