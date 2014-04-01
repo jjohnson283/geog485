@@ -55,8 +55,8 @@
             // from USGS National Atlas: http://webservices.nationalatlas.gov/wms?SERVICE=WMS&REQUEST=GetCapabilities
             countiesLayer = new OpenLayers.Layer.WMS( 
             	"Fire Danger", 
-            	"http://igskmncngs136.cr.usgs.gov:80/wmsconnector/com.esri.wms.Esrimap/USGS_EDC_LandFire2?",
-            	{layers: "LANDFIRE.AK_120CFFDRS", version: '1.3.0', transparent: 'TRUE'},
+            	"http://geohub.jrc.ec.europa.eu/forest/effis/effis_current?",
+            	{layers: "effis%3Acurrent_hs_last90", version: '1.3.0', transparent: 'TRUE'},
             	{isBaseLayer: false}
 				
             );
