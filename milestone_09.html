@@ -54,9 +54,9 @@
             // =========== USGS National Atlas WMS ====
             // from USGS National Atlas: http://webservices.nationalatlas.gov/wms?SERVICE=WMS&REQUEST=GetCapabilities
             countiesLayer = new OpenLayers.Layer.WMS( 
-            	"US Counties", 
-            	"http://webservices.nationalatlas.gov/wms/?",
-            	{layers: "counties", version: '1.3.0', transparent: 'TRUE'},
+            	"Fire Danger", 
+            	"http://landfire.cr.usgs.gov//wms/?",
+            	{layers: "LANDFIRE.US_105BPS", version: '1.3.0', transparent: 'TRUE'},
             	{isBaseLayer: false}
 				
             );
