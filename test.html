@@ -72,19 +72,7 @@
 		
 			map.addLayer(landslidesLayer);
 			
-	  Layers.climate Indices = new OpenLayers.Layer.Vector("Divisional Data", {
-                projection: map.displayProjection,
-                visibility: false,
-                style:  myCitiesStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "gis.ncdc.noaa.gov/kml/div.kmz",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.climate Indices)
+
 			
 			map.setCenter(
                 new OpenLayers.LonLat(lon, lat).transform(
