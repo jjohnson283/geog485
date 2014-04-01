@@ -163,34 +163,7 @@
                 })
             });
            	map.addLayer(Layers.states)	
-           		
-			Layers.counties = new OpenLayers.Layer.Vector("KML - Counties", {
-                projection: map.displayProjection,
-                visibility: false,
-                style: myCountiesStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://kkb-web.s3.amazonaws.com/data/NMCounties.kml",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.counties)		
-			            
-			Layers.cities = new OpenLayers.Layer.Vector("KML - Cities", {
-                projection: map.displayProjection,
-                visibility: false,
-                style:  myCitiesStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://kkb-web.s3.amazonaws.com/data/NMCities.kml",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.cities)	
+           	
 			
 			map.setCenter(
                 new OpenLayers.LonLat(lon, lat).transform(
