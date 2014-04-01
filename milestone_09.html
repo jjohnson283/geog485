@@ -61,7 +61,7 @@
 				
             );
 		
-			map.addLayer(countiesLayer);
+			map.addLayer(landslidesLayer);
 			
 			 lslideLayer = new OpenLayers.Layer.WMS( 
             	"Landslide Incidence and Susceptibility", 
@@ -69,7 +69,7 @@
             	{layers: "lslide", version: '1.3.0', transparent: 'TRUE'},
             	{isBaseLayer: false, visibility: false}
             );
-            map.addLayer(damsLayer);
+            map.addLayer(lslideLayer);
 			
 			hucsLayer = new OpenLayers.Layer.WMS( 
             	"Hydrologic Units", 
