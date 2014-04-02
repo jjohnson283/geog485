@@ -16,6 +16,7 @@
         var lat = 41.07162;
         var zoom = 5
         var map;
+        var gsat;
         var Layers = new Object();
         var layer,lslideLayer ,landslidesLayer;
         
@@ -55,6 +56,10 @@
              gsat = new OpenLayers.Layer.Google(
                 "Google Satellite",
                 {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
+            );
+            
+            map.addLayers ({gsat});
+            
             
             // =========== USGS National Atlas WMS ====
             // from USGS National Atlas: http://webservices.nationalatlas.gov/wms?SERVICE=WMS&REQUEST=GetCapabilities
