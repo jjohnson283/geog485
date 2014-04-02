@@ -74,8 +74,8 @@
 		
 			map.addLayer(landslidesLayer);
 			
-			Layers.Oso Landslide - Vector Features = new OpenLayers.Layer.Vector('Oso Landslide - Vector Features');
-    		map.addLayer(Layers.Oso Landslide - Vector Features);
+		Layers.localFeatures = new OpenLayers.Layer.Vector('Oso Landslide - Vector Features');
+    		map.addLayer(Layers.localFeatures);;
 
 			
 			// =========== Create Some Styles ==============
@@ -85,15 +85,26 @@
     			fillColor: "#CC0000",
     			fillOpacity: .5,
     			strokeOpacity: .5}
-    			
+
+    		myCountiesStyle = {
+    			fillColor: "#ffffff",
+    			fillOpacity: .2,
+    			strokeOpacity: .5,
+    			strokeColor: "#ffffff"}
+
     		myStatesStyle = {
     			fillColor: "#0000ff",
     			fillOpacity: .2,
     			strokeOpacity: .5,
     			strokeColor: "#0000ff"}
 
+    		myCitiesStyle = {
+    			fillColor: "#00ff00",
+    			fillOpacity: .2,
+    			strokeOpacity: .5,
+    			strokeColor: "#00ff00"}
 
-    		myLslideExtentStyle = {
+    		myBuildingStyle = {
     			fillColor: "#88ff00",
     			fillOpacity: .2,
     			strokeOpacity: .5,
