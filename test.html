@@ -52,6 +52,10 @@
             layer = new OpenLayers.Layer.OSM( "Open Street Map");
             map.addLayer(layer);
             
+             gsat = new OpenLayers.Layer.Google(
+                "Google Satellite",
+                {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
+            
             // =========== USGS National Atlas WMS ====
             // from USGS National Atlas: http://webservices.nationalatlas.gov/wms?SERVICE=WMS&REQUEST=GetCapabilities
             lslideLayer = new OpenLayers.Layer.WMS( 
@@ -75,9 +79,6 @@
 			Layers.localFeatures = new OpenLayers.Layer.Vector('My Local Features');
     		map.addLayer(Layers.localFeatures);
 
-	 gsat = new OpenLayers.Layer.Google(
-                "Google Satellite",
-                {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
 			
 			// =========== Create Some Styles ==============
 			// Define some Styles
