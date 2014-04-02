@@ -75,6 +75,9 @@
 			Layers.localFeatures = new OpenLayers.Layer.Vector('My Local Features');
     		map.addLayer(Layers.localFeatures);
 
+	 gsat = new OpenLayers.Layer.Google(
+                "Google Satellite",
+                {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
 			
 			// =========== Create Some Styles ==============
 			// Define some Styles
