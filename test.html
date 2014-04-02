@@ -16,9 +16,7 @@
         var lat = 41.07162;
         var zoom = 5
         var map;
-        var gsat;
         var Layers = new Object();
-        var OSMLayer;
         var layer,lslideLayer ,landslidesLayer;
         
         // define map controls
@@ -51,11 +49,7 @@
             
 			// =========== OSM Map ====================
 
-	    gsat = new OpenLayers.Layer.Google(
-                "Google Satellite",
-                {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
-            );
-            
+	   
             map.addLayers ({gsat});
 		
             layer = new OpenLayers.Layer.OSM( "Open Street Map");
