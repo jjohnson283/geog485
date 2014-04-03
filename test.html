@@ -16,6 +16,19 @@
         var map;
         var Layers = new Object();
         var usImagery, lslideLayer, indlandLayer, landslidesLayer, localFeatures, states;
+        
+         map = new OpenLayers.Map( 'map',{
+            maxExtent: new OpenLayers.Bounds(
+                -128 * 156543.0339,
+                -128 * 156543.0339,
+                128 * 156543.0339,
+                128 * 156543.0339),
+                maxResolution: 156543.0339,                
+                units: 'm',
+                projection: new OpenLayers.Projection('EPSG:3857'),
+                displayProjection: new OpenLayers.Projection("EPSG:4326"),
+            } );
+            
 
         // =============== Initialization function ===================
         function init(){
