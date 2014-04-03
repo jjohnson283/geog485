@@ -100,9 +100,9 @@
 			// =========== Create Some Geometries & Features ==============
 
 			// Key Coordinates (Geometries)
-			var Coord_classroom = new OpenLayers.Geometry.Point(-121.848003,48.28256);
-    		var Coord_office = new OpenLayers.Geometry.Point(-121.842919,48.278823);
-    		var Coord_building = new OpenLayers.Geometry.LinearRing([
+			var Coord_mudslidecenter = new OpenLayers.Geometry.Point(-121.848003,48.28256);
+    		var Coord_mudslideEnd = new OpenLayers.Geometry.Point(-121.842919,48.278823);
+    		var Coord_displacedExtent = new OpenLayers.Geometry.LinearRing([
     			new OpenLayers.Geometry.Point(-121.850236,48.281859),
      			new OpenLayers.Geometry.Point(-121.849335,48.285638),
     			new OpenLayers.Geometry.Point(-121.847442, 48.285869),
@@ -111,16 +111,16 @@
     			new OpenLayers.Geometry.Point(-121.847657, 48.280735),
     			new OpenLayers.Geometry.Point(-121.848395, 48.281848),
    			]);
-   			var Coord_buildingPath = new OpenLayers.Geometry.LineString([
-   				Coord_classroom,
-     				Coord_office,   				
+   			var Coord_mudslidePath = new OpenLayers.Geometry.LineString([
+   				Coord_mudslidecenter,
+     				Coord_mudslideExtent,   				
    			])
     		
     		// Corresponding Features
-    		var Point_classroom = new OpenLayers.Feature.Vector(Coord_classroom,null,myRedPointStyle);
-    		var Point_office = new OpenLayers.Feature.Vector(Coord_office);
-    		var LinearRing_building = new OpenLayers.Feature.Vector(Coord_building, null, myBuildingStyle);
-    		var LineString_buildingPath = new OpenLayers.Feature.Vector(Coord_buildingPath, null, myPathStyle);
+    		var Point_classroom = new OpenLayers.Feature.Vector(Coord_mudslidecenter,null,myRedPointStyle);
+    		var Point_office = new OpenLayers.Feature.Vector(Coord_mudslideEnd);
+    		var LinearRing_building = new OpenLayers.Feature.Vector(Coord_displacedExtent, null, myBuildingStyle);
+    		var LineString_buildingPath = new OpenLayers.Feature.Vector(Coord_mudslidePath, null, myPathStyle);
     		
     		Layers["localFeatures"].addFeatures([Point_classroom, Point_office, LinearRing_building, LineString_buildingPath]);
     		
