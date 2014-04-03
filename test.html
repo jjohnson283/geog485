@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	
 	
-	<head>
+<head>
     <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript">
         
@@ -34,24 +34,6 @@
             	{isBaseLayer: true}
             );
             map.addLayer(Layers.usImagery)
-            
-            Layers.lslideLayer = new OpenLayers.Layer.WMS( 
-            	"Landslide Incidence and Susceptibility", 
-            	"http://webservices.nationalatlas.gov/wms/geology?",
-            	{layers: "lslide", version: '1.3.0', transparent: 'TRUE'},
-            	{isBaseLayer: false, visibility: false}
-            );
-            map.addLayer(Layers.lslideLayer);
-            
-            Layers.landslidesLayer = new OpenLayers.Layer.WMS( 
-            	"Costly Landslides", 
-            	"http://webservices.nationalatlas.gov/wms/geology?",
-            	{layers: "landx", version: '1.1.1', transparent: 'TRUE'},
-            	{isBaseLayer: false, visibility: false}
-				
-            );
-		
-	    map.addLayer(layers.landslidesLayer);
 
 
 			// =========== Create and add a Vector layer to the map that that will contain the created features ====
@@ -133,7 +115,7 @@
 			
 			
 			// =========== KML Layer Addition ===============
-	Layers.states = new OpenLayers.Layer.Vector("KML - States", {
+			Layers.states = new OpenLayers.Layer.Vector("KML - States", {
                 projection: map.displayProjection,
                 visibility: false,
                 style: myStatesStyle,
