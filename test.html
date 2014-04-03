@@ -31,7 +31,7 @@
 			// =========== USGS National Map WMS ====== 
 
             // from http://basemap.nationalmap.gov/ArcGIS/services/USGSImageryTopo/MapServer/WMSServer?request=GetCapabilities&service=WMS
-			Layers.usImagery = new OpenLayers.Layer.WMS( 
+		Layers.usImagery = new OpenLayers.Layer.WMS( 
             	"US Imagery Tile Service - USGS", 
             	"http://basemap.nationalmap.gov/arcgis/services/USGSImageryTopo/MapServer/WmsServer?",
             	{layers: "0", version: '1.3.0', transparent: 'TRUE'},
@@ -59,7 +59,7 @@
 				
             );
 		
-			map.addLayer(landslidesLayer);
+	    map.addLayer(landslidesLayer);
 			
 		Layers.localFeatures = new OpenLayers.Layer.Vector('Oso Landslide - Vector Features');
     		map.addLayer(Layers.localFeatures);;
