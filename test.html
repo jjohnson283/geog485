@@ -8,9 +8,9 @@
     <script type="text/javascript">
         
         // define global variables
-        var lon = -106.624899;
-        var lat = 35.084506;
-        var zoom = 18;
+        var lon = -115.09668;
+        var lat = 41.07162;
+        var zoom = 5;
         var myProjection = new OpenLayers.Projection("EPSG:4326")
         var map;
         var Layers = new Object();
@@ -133,7 +133,7 @@
 			
 			
 			// =========== KML Layer Addition ===============
-			Layers.states = new OpenLayers.Layer.Vector("KML - States", {
+			Layers.states = new OpenLayers.Layer.Vector("KML - New Mexico State", {
                 projection: map.displayProjection,
                 visibility: false,
                 style: myStatesStyle,
@@ -146,34 +146,7 @@
                 })
             });
            	map.addLayer(Layers.states)	
-           		
-			Layers.counties = new OpenLayers.Layer.Vector("KML - Counties", {
-                projection: map.displayProjection,
-                visibility: false,
-                style: myCountiesStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://kkb-web.s3.amazonaws.com/data/NMCounties.kml",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.counties)		
-			            
-			Layers.cities = new OpenLayers.Layer.Vector("KML - Cities", {
-                projection: map.displayProjection,
-                visibility: false,
-                style:  myCitiesStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://kkb-web.s3.amazonaws.com/data/NMCities.kml",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.cities)		
+           			
 			            
 			            
 			
