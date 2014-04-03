@@ -15,6 +15,7 @@
         var lon = -115.09668;
         var lat = 41.07162;
         var zoom = 5;
+        var myProjection = new OpenLayers.Projection("EPSG:4326")
         var map;
         var Layers = new Object();
         var layer,lslideLayer ,landslidesLayer;
@@ -31,26 +32,19 @@
         // =============== Initialization function ========// =========== OSM Map ====================
 		
 		        function init(){
-            //map = new OpenLayers.Map( 'map' );
             
-            map = new OpenLayers.Map('map', {
-			
-				maxExtent: new OpenLayers.Bounds(
-				-128 * 156543.0339,
-                		-128 * 156543.0339,
-        			 128 * 156543.0339,
-        			 128 * 156543.0339),
-				maxResolution: 156543.0339,
-				units: 'm', 
-				 projection: new OpenLayers.Projection('EPSG:3857'),
-                displayProjection: new OpenLayers.Projection("EPSG:4326"),
-				controls: baseControls
-			});
-            
-			// =========== OSM Map ====================
-		 layer = new OpenLayers.Layer.OSM( "Open Street Map");
-            		map.addLayer(layer);
-            
+		 map = new OpenLayers.Map('map',
+            	{
+            		numZoomLevels: 20
+            	});
+		 
+		 Layers.usImagery = new OpenLayers.Layer.WMS( 
+            	"US Imagery Tile Service - USGS", 
+            	"http://basemap.nationalmap.gov/arcgis/services/USGSImageryTopo/MapServer/WmsServer?",
+            	{layers: "0", version: '1.3.0', transparent: 'TRUE'},
+            	{isBaseLayer: true}
+            );
+            map.addLayer(Layers.usImagery
   
             
             
@@ -68,7 +62,7 @@
             	"Costly Landslides", 
             	"http://webservices.nationalatlas.gov/wms/geology?",
             	{layers: "landx", version: '1.1.1', transparent: 'TRUE'},
-            	{isBaseLayer: false}
+            	{isBaseLayer: false, visibility: false}
 				
             );
 		
@@ -161,13 +155,11 @@
            	map.addLayer(Layers.states)	
            	
 			
-			map.setCenter(
-                new OpenLayers.LonLat(lon, lat).transform(
-                    new OpenLayers.Projection("EPSG:4326"),
-                    map.getProjectionObject()
-                ), zoom
+		map.setCenter(
+                new OpenLayers.LonLat(lon, lat), zoom
             );
-
+            
+            
             map.addControl(new OpenLayers.Control.LayerSwitcher() );
             map.addControl(new OpenLayers.Control.OverviewMap() );
         }
