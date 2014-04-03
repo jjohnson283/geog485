@@ -117,12 +117,12 @@
    			])
     		
     		// Corresponding Features
-    		var Point_classroom = new OpenLayers.Feature.Vector(Coord_mudslidecenter,null,myRedPointStyle);
-    		var Point_office = new OpenLayers.Feature.Vector(Coord_mudslideEnd);
-    		var LinearRing_building = new OpenLayers.Feature.Vector(Coord_displacedExtent, null, myBuildingStyle);
-    		var LineString_buildingPath = new OpenLayers.Feature.Vector(Coord_mudslidePath, null, myPathStyle);
+    		var Point_mudslidecenter = new OpenLayers.Feature.Vector(Coord_mudslidecenter,null,myRedPointStyle);
+    		var Point_mudslideEnd = new OpenLayers.Feature.Vector(Coord_mudslideEnd);
+    		var LinearRing_displacedExtent = new OpenLayers.Feature.Vector(Coord_displacedExtent, null, myBuildingStyle);
+    		var LineString_mudslidePath = new OpenLayers.Feature.Vector(Coord_mudslidePath, null, myPathStyle);
     		
-    		Layers["localFeatures"].addFeatures([Point_classroom, Point_office, LinearRing_building, LineString_buildingPath]);
+    		Layers["localFeatures"].addFeatures([Point_mudslidecenter, Point_mudslideEnd, LinearRing_displacedExtent, LineString_mudslidePath]);
     		
 			
 			
