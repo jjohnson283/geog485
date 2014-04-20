@@ -84,8 +84,8 @@
 			countyWMS = new OpenLayers.Layer.WMS( 
 				"US Counties", 
 				"http://webservices.nationalatlas.gov/wms?",
-				{layers: "counties", version: '1.3.0', transparent: 'true'},
-				{isBaseLayer: false, visibility: false}
+				{layers: "counties", version: '1.1.0', transparent: 'TRUE'},
+				{isBaseLayer: false, visibility: false, opacity: .8}
 			);
 			map.addLayer(countyWMS);
             
