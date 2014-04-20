@@ -81,13 +81,13 @@
 			map.addLayer(countyKML)
 			
 			//Adding WMS layer
-			countyWMS = new OpenLayers.Layer.WMS( 
-				"US Counties", 
-				"http://webservices.nationalatlas.gov/wms?",
-				{layers: "counties", version: '1.1.0', transparent: 'TRUE'},
-				{isBaseLayer: false, visibility: false}
-			);
-			map.addLayer(countyWMS);
+			countiesLayer = new OpenLayers.Layer.WMS( 
+            	"US Counties", 
+            	"http://webservices.nationalatlas.gov/wms?",
+            	{layers: "counties", version: '1.3.0', transparent: 'TRUE'},
+            	{isBaseLayer: false, visibility: false, opacity: .8}
+            );
+            map.addLayer(countiesLayer);
             
             map.setCenter(
                 new OpenLayers.LonLat(lon, lat).transform(
