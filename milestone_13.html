@@ -32,7 +32,7 @@
             Layers.lslide = new OpenLayers.Layer.WMS( 
             	"Landslide Incidence and Susceptibility", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "lsoverp020", version: '1.1.1', transparent: 'true', style: "NewPolygon"},
+            	{layers: "lsoverp020", version: '1.1.1', transparent: 'true', style: 'NewPolygon'},
             	{isBaseLayer: false, visibility: false}
             );
             map.addLayer(Layers.lslide)
@@ -42,7 +42,7 @@
 		Layers.costlylslides = new OpenLayers.Layer.WMS( 
             	"Costly Landslides", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "landslx020", version: '1.1.1', transparent: 'true'},
+            	{layers: "landslx020", version: '1.1.1', transparent: 'true', style: 'LslidePoint'},
             	{isBaseLayer: false, visibility: false}
             );
             map.addLayer(Layers.costlylslides)
@@ -52,7 +52,7 @@
 		Layers.quakes = new OpenLayers.Layer.WMS( 
             	"Earthquakes", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "quksigx020", version: '1.1.1', transparent: 'true'},
+            	{layers: "quksigx020", version: '1.1.1', transparent: 'true', style: 'BluePoint'},
             	{isBaseLayer: false, visibility: false}
             );
             map.addLayer(Layers.quakes)
@@ -62,7 +62,7 @@
 		Layers.volcanoes = new OpenLayers.Layer.WMS( 
             	"Volcanoes", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "volcanx020", version: '1.1.1', transparent: 'true'},
+            	{layers: "volcanx020", version: '1.1.1', transparent: 'true', style: 'RedPoint'},
             	{isBaseLayer: false, visibility: false}
             );
             map.addLayer(Layers.volcanoes)
