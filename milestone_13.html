@@ -4,7 +4,7 @@
 	
 	
 <head>
-	<title>Milestone #13</title>
+	<title>Milestone #9</title>
     <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript">
       
@@ -29,15 +29,7 @@
             );
             map.addLayer(Layers.usImagery)
             
-           lslideLayer = new OpenLayers.Layer.WMS( 
-            	"Landslide Incidence and Susceptibility", 
-            	"http://webservices.nationalatlas.gov/wms/geology?",
-            	{layers: "lslide", version: '1.3.0', transparent: 'TRUE'},
-            	{isBaseLayer: false, visibility: false}
-            );
-            map.addLayer(lslideLayer);
-            
-          Layers.lslide = new OpenLayers.Layer.WMS( 
+            Layers.lslide = new OpenLayers.Layer.WMS( 
             	"Landslide Incidence and Susceptibility", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
             	{layers: "lsoverp020", version: '1.1.1', transparent: 'true'},
@@ -47,7 +39,7 @@
 			
 			
 		
-			Layers.costlylslides = new OpenLayers.Layer.WMS( 
+		Layers.costlylslides = new OpenLayers.Layer.WMS( 
             	"Costly Landslides", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
             	{layers: "ladslx020", version: '1.1.1', transparent: 'true'},
@@ -57,7 +49,7 @@
 			
 			
 			
-			Layers.quakes = new OpenLayers.Layer.WMS( 
+		Layers.quakes = new OpenLayers.Layer.WMS( 
             	"Earthquakes", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
             	{layers: "quksigx020", version: '1.1.1', transparent: 'true'},
@@ -67,26 +59,105 @@
 			
 			
 			
-			Layers.volcanoes = new OpenLayers.Layer.WMS( 
+		Layers.volcanoes = new OpenLayers.Layer.WMS( 
             	"Volcanoes", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
             	{layers: "volcanx020", version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
             map.addLayer(Layers.volcanoes)
-			
-		
-            map.setCenter(
-                new OpenLayers.LonLat(lon, lat), zoom
-            );  
-        }
-        //<!-- Initialization End -->
-        
-    	</script>
-	</head>
-	
-	
-	<body onload="init()"> 	
+            
+           lslideLayer = new OpenLayers.Layer.WMS( 
+            	"Landslide Incidence and Susceptibility", 
+            	"http://webservices.nationalatlas.gov/wms/geology?",
+            	{layers: "lslide", version: '1.3.0', transparent: 'TRUE'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(lslideLayer);
+            
+            landslidesLayer = new OpenLayers.Layer.WMS( 
+            	"Costly Landslides", 
+            	"http://webservices.nationalatlas.gov/wms/geology?",
+            	{layers: "landx", version: '1.1.1', transparent: 'TRUE'},
+            	{isBaseLayer: false, visibility: false}
+				
+            );
+	    map.addLayer(landslidesLayer);
+
+    		Layers.localFeatures = new OpenLayers.Layer.Vector('Oso Landslide - Vector Features');
+    		map.addLayer(Layers.localFeatures);
+
+    		myRedPointStyle = {
+    			pointRadius: 12, 
+    			fillColor: "#CC0000",
+    			fillOpacity: .5,
+    			strokeOpacity: .5}
+
+    		myCountiesStyle = {
+    			fillColor: "#ffffff",
+    			fillOpacity: .2,
+    			strokeOpacity: .5,
+    			strokeColor: "#ffffff"}
+
+    		myStatesStyle = {
+    			fillColor: "#0000ff",
+    			fillOpacity: .2,
+    			strokeOpacity: .5,
+    			strokeColor: "#0000ff"}
+
+    		myCitiesStyle = {
+    			fillColor: "#00ff00",
+    			fillOpacity: .2,
+    			strokeOpacity: .5,
+    			strokeColor: "#00ff00"}
+
+    		myBuildingStyle = {
+    			fillColor: "#88ff00",
+    			fillOpacity: .2,
+    			strokeOpacity: .5,
+    			strokeColor: "#88ff00"}
+
+    		myPathStyle = {
+    			strokeOpacity: .8,
+    			strokeColor: "#880088",
+    			strokeWidth: 2}
+
+			var Coord_mudslidecenter = new OpenLayers.Geometry.Point(-121.848003,48.28256);
+    		var Coord_mudslideEnd = new OpenLayers.Geometry.Point(-121.842919,48.278823);
+    		var Coord_displacedExtent = new OpenLayers.Geometry.LinearRing([
+    			new OpenLayers.Geometry.Point(-121.850236,48.281859),
+     			new OpenLayers.Geometry.Point(-121.849335,48.285638),
+    			new OpenLayers.Geometry.Point(-121.847442, 48.285869),
+    			new OpenLayers.Geometry.Point(-121.844201, 48.283831),
+    			new OpenLayers.Geometry.Point(-121.843766, 48.282666),
+    			new OpenLayers.Geometry.Point(-121.847657, 48.280735),
+    			new OpenLayers.Geometry.Point(-121.848395, 48.281848),
+   			]);
+   			var Coord_mudslidePath = new OpenLayers.Geometry.LineString([
+   				Coord_mudslidecenter,
+     				Coord_mudslideEnd,   				
+   			])
+    		
+    		var Point_mudslidecenter = new OpenLayers.Feature.Vector(Coord_mudslidecenter,null,myRedPointStyle);
+    		var Point_mudslideEnd = new OpenLayers.Feature.Vector(Coord_mudslideEnd);
+    		var LinearRing_displacedExtent = new OpenLayers.Feature.Vector(Coord_displacedExtent, null, myBuildingStyle);
+    		var LineString_mudslidePath = new OpenLayers.Feature.Vector(Coord_mudslidePath, null, myPathStyle);
+    		
+    		Layers["localFeatures"].addFeatures([Point_mudslidecenter, Point_mudslideEnd, LinearRing_displacedExtent, LineString_mudslidePath]);
+    		
+			Layers.states = new OpenLayers.Layer.Vector("KML - New Mexico State", {
+                projection: map.displayProjection,
+                visibility: false,
+                style: myStatesStyle,
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: "http://kkb-web.s3.amazonaws.com/data/tl_2010_35_state10.kml",
+                    format: new OpenLayers.Format.KML({
+                        extractAttributes: true
+                    })
+                })
+            });
+           	map.addLayer(Layers.states)	
            			
 			map.setCenter(
                 new OpenLayers.LonLat(lon, lat), zoom
