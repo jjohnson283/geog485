@@ -52,7 +52,7 @@
 		Layers.quakes = new OpenLayers.Layer.WMS( 
             	"Earthquakes", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "quksigx020", stylez: 'BluePoint', version: '1.1.1', transparent: 'true'},
+            	{layers: "quksigx020", styles: 'BluePoint', version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
             map.addLayer(Layers.quakes)
