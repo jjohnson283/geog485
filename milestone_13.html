@@ -32,7 +32,7 @@
             Layers.lslide = new OpenLayers.Layer.WMS( 
             	"Landslide Incidence and Susceptibility", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "lsoverp020", version: '1.1.1', transparent: 'true', style: 'NewPolygon'},
+            	{layers: "lsoverp020", version: '1.1.1', style: 'NewPolygon', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
             map.addLayer(Layers.lslide)
