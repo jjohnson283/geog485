@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	
+<head>
+	<title>Final Exam</title>
+    <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script type="text/javascript">
+      
+        var lon = -114.15199;
+        var lat = 40.35459;
+        var zoom = 6;
+        var myProjection = new OpenLayers.Projection("EPSG:4326")
+        var map;
+        var Layers = new Object();
+      
+        function init(){
+             
+            map = new OpenLayers.Map('map',
+            	{
+            		numZoomLevels: 20 
+            	});
+	   Layers.usImagery = new OpenLayers.Layer.WMS( 
+            	"US Imagery Tile Service - USGS", 
+            	"http://basemap.nationalmap.gov/arcgis/services/USGSImageryTopo/MapServer/WmsServer?",
+            	{layers: "0", version: '1.3.0', transparent: 'TRUE'},
+            	{isBaseLayer: true}
+            );
+            map.addLayer(Layers.usImagery)
+            
+            Layers.lslide = new OpenLayers.Layer.WMS( 
+            	"Landslide Incidence and Susceptibility", 
+            	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
+            	{layers: "lsoverp020", styles: 'NewPolygon', version: '1.1.1', transparent: 'true'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(Layers.lslide)
+			
+			
+		
+		Layers.costlylslides = new OpenLayers.Layer.WMS( 
+            	"Costly Landslides", 
+            	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
+            	{layers: "landslx020", styles: 'LslidePoint', version: '1.1.1', transparent: 'true'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(Layers.costlylslides)
+			
+			
+			
+		Layers.quakes = new OpenLayers.Layer.WMS( 
+            	"Earthquakes", 
+            	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
+            	{layers: "quksigx020", styles: 'BluePoint', version: '1.1.1', transparent: 'true'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(Layers.quakes)
+			
+			
+			
+		Layers.volcanoes = new OpenLayers.Layer.WMS( 
+            	"Volcanoes", 
+            	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
+            	{layers: "volcanx020", styles: 'RedPoint', version: '1.1.1', transparent: 'true'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(Layers.volcanoes)
+            
+           lslideLayer = new OpenLayers.Layer.WMS( 
+            	"Landslide Incidence and Susceptibility (Original WMS)", 
+            	"http://webservices.nationalatlas.gov/wms/geology?",
+            	{layers: "lslide", version: '1.3.0', transparent: 'TRUE'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(lslideLayer);
+            
+  	
+           			
+			map.setCenter(
+                new OpenLayers.LonLat(lon, lat), zoom
+            );
+            map.addControl(new OpenLayers.Control.LayerSwitcher() );
+            map.addControl(new OpenLayers.Control.MousePosition() );
+            map.addControl(new OpenLayers.Control.Permalink() );
+            map.addControl(new OpenLayers.Control.PanZoomBar() );
+               
+        }
+     
+	</script>
+	<style type="text/css">
+ #map {width:90%; height:800px}
+        body { color: white; background: black; }
+  		  h1 { color: green }
+  		  h2 { color: red }
+  		  body { margin-left: 10%; margin-right: 10%; }
+  		  h1 { margin-left: -8%;}
+   		  h2 { margin-left: -4%; }
+                  html { height: 100% }
+	</style>
+  </head>
+	<body onload="init()">
+	<h1>Final Exam</h1>
+	<p>
+	James Johnson
+	</p>
+	</br>
+	<p>With the recent devestating mudslide outside of Oso, Washington I thought I'd address the problem of landslides in the United States. Landslides occur all over the country yet there is not much done in the way of mitigatation. My map will show where the most risk of landslides are so people can see how widespread this natural and potentially devestating phenomenon is.</p>
+	<p>Included in this this map will be overlays of geologic phenomina that are related to landslides. Each overlay has a custom style and is hosted from my Geoserver stores, except for the original WMS overlay.</p>
+	<p>Overlays that show geologic phenomena that cause landslide include:</p>
+	<ul>
+	<li>Volcanoes-Shown by red circles</li>
+	<li>Earthquakes - Shown by blue squares</li>
+	</ul>
+	<p>There are also overlays that show the incidence and susceptibility to landslides accross the U.S. as well as points where costly landslide events have taken place. The overlay labeled "Original WMS" is the one that corresponds to the legend below the map. </p>
+	<ul>
+	<li>Costly Landslides - Shows the points of all landslides accross the country that were costly incidents - Represented by green triangles.</li>	
+	</ul>
+	<div id="map"></div>
+	<img src=http://webservices.nationalatlas.gov/wms?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=lslide&format=image/png&STYLE=default /></a> 
+	</body>
+	
+	
+		<FORM METHOD="LINK" ACTION="http://jjohnson283.github.io/geog485/index.html">
+<INPUT TYPE="submit" VALUE="Back to Home">
+</FORM>
+</html>
