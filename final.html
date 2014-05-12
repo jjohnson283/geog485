@@ -29,51 +29,51 @@
             );
             map.addLayer(Layers.usImagery)
             
-            Layers.lslide = new OpenLayers.Layer.WMS( 
-            	"Landslide Incidence and Susceptibility", 
+            Layers.A5Cont = new OpenLayers.Layer.WMS( 
+            	"35106-A5_CONT", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "lsoverp020", styles: 'NewPolygon', version: '1.1.1', transparent: 'true'},
+            	{layers: "35106-A5_CONT", version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
-            map.addLayer(Layers.lslide)
+            map.addLayer(Layers.A5Cont)
 			
 			
 		
-		Layers.costlylslides = new OpenLayers.Layer.WMS( 
-            	"Costly Landslides", 
+		Layers.A6Cont = new OpenLayers.Layer.WMS( 
+            	"35106-A6_CONT", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "landslx020", styles: 'LslidePoint', version: '1.1.1', transparent: 'true'},
+            	{layers: "35106-A6_CONT", version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
-            map.addLayer(Layers.costlylslides)
+            map.addLayer(Layers.A6Cont)
 			
 			
 			
-		Layers.quakes = new OpenLayers.Layer.WMS( 
-            	"Earthquakes", 
+		Layers.streets = new OpenLayers.Layer.WMS( 
+            	"Streets", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "quksigx020", styles: 'BluePoint', version: '1.1.1', transparent: 'true'},
+            	{layers: "tgr2006se_bern_lka", version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
-            map.addLayer(Layers.quakes)
+            map.addLayer(Layers.streets)
 			
 			
 			
-		Layers.volcanoes = new OpenLayers.Layer.WMS( 
-            	"Volcanoes", 
+		Layers.A5 = new OpenLayers.Layer.WMS( 
+            	"35106-A5", 
             	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
-            	{layers: "volcanx020", styles: 'RedPoint', version: '1.1.1', transparent: 'true'},
+            	{layers: "35106-A5", version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
-            map.addLayer(Layers.volcanoes)
+            map.addLayer(Layers.A5)
             
-           lslideLayer = new OpenLayers.Layer.WMS( 
-            	"Landslide Incidence and Susceptibility (Original WMS)", 
-            	"http://webservices.nationalatlas.gov/wms/geology?",
-            	{layers: "lslide", version: '1.3.0', transparent: 'TRUE'},
+           Layers.A6 = new OpenLayers.Layer.WMS( 
+            	"35106-A6 ", 
+            	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
+            	{layers: "35106-A6 ", version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
-            map.addLayer(lslideLayer);
+            map.addLayer(Layers.A6);
             
   	
            			
