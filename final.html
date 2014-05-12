@@ -73,7 +73,25 @@
             	{layers: "35106-A6 ", styles: 'dem', version: '1.1.1', transparent: 'true'},
             	{isBaseLayer: false, visibility: false}
             );
-            map.addLayer(Layers.A6);
+            map.addLayer(Layers.A6)
+            
+            Layers.A5Cont2 = new OpenLayers.Layer.WMS( 
+            	"35106-A5_CONT2 - Styled", 
+            	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
+            	{layers: "35106-A5_CONT2", version: '1.1.1', transparent: 'true'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(Layers.A5Cont2)
+			
+			
+			
+		Layers.streets2 = new OpenLayers.Layer.WMS( 
+            	"Streets - Styled", 
+            	"http://geog485.unm.edu:8080/geoserver/s_jjohnso1/ows?",
+            	{layers: "tgr2006se_bern_lka2", version: '1.1.1', transparent: 'true'},
+            	{isBaseLayer: false, visibility: false}
+            );
+            map.addLayer(Layers.streets2);
             
   	
            			
